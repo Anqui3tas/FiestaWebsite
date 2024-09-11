@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fiesta Online</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css?ver=1.0.8" rel="stylesheet">
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/jquery.lightbox.css">
+</head>
+
+
+<body onload="initialize()">
+<div class="container-fluid block_one">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 logo">
+          <a href="#" class="option animated fadeInDownBig">
+            <img src="img/FO_RoE_web.png" alt=""/>
+          </a>
+        </div>
+        <div class="col-xs-12 one_block_cont">
+          <h1 class="option animated fadeInLeft">A MYSTIC WORLD OF ADVENTURES
+            <span></span>
+          </h1>
+          <span class="option animated fadeInRight">Explore the vibrant world of Isya, complete quests and conquer extraordinary foes. </span>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid block_features">
+  <div class="container">
+    <div class="row">
+      <h2 class="lightbg fadeInRight">Choose Your Class<span></span></h2>
+
+      <div class="class-container">
+        <div class="class-icon" data-class="archer">
+          <img src="img/class-icon-archer.png" alt="Archer Icon" style="width: 50px; height: 50px;">
+          <h3>Archer</h3>
+        </div>
+        <div class="class-icon" data-class="crusader">
+          <img src="img/class-icon-crusader.png" alt="Crusader Icon" style="width: 50px; height: 50px;">
+          <h3>Crusader</h3>
+        </div>
+        <div class="class-icon" data-class="cleric">
+          <img src="img/class-icon-cleric.png" alt="Cleric Icon" style="width: 50px; height: 50px;">
+          <h3>Cleric</h3>
+        </div>
+        <div class="class-icon" data-class="fighter">
+          <img src="img/class-icon-fighter.png" alt="Fighter Icon" style="width: 50px; height: 50px;">
+          <h3>Fighter</h3>
+        </div>
+        <div class="class-icon" data-class="mage">
+          <img src="img/class-icon-mage.png" alt="Mage Icon" style="width: 50px; height: 50px;">
+          <h3>Mage</h3>
+        </div>
+        <div class="class-icon" data-class="joker">
+          <img src="img/class-icon-joker.png" alt="Joker Icon" style="width: 50px; height: 50px;">
+          <h3>Trickster</h3>
+        </div>
+      </div>
+
+      <div id="class-description">
+        <p class="description-text"></p>
+        <img id="class-main-image" src="" alt="Class Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid block_two">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text wow bounceInRight">
+          <h2>Wanna Play?
+            <span></span>
+          </h2>
+          <span>Built in guides to help you learn the game from the bottom up, Perfect for new users, and returning users who need to refresh. New Features, new monsters, new worlds to explore.</span>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid block_links"></div>
+  <div class="container">
+    <div class="row">
+      <h2 class="lightbg fadeInRight">History of Fiesta<span></span></h2>
+      <div class="links-container">
+        <div class="links-icon" data-class="chp1">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 1: The Birth of Bijou</h5>
+        </div>
+        <div class="links-icon" data-class="chp2">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 2: The Discovery of Bijou</h5>
+        </div>
+        <div class="links-icon" data-class="chp3">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 3: Journey with embracing Bijou</h5>
+        </div>
+        <div class="links-icon" data-class="chp4">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 4 - Elderines' Town</h5>
+        </div>
+        <div class="links-icon" data-class="chp5">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 5: Epith’s choice</h5>
+        </div>
+        <div class="links-icon" data-class="chp6">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 6: Oath of Hednis</h5>
+        </div>
+        <div class="links-icon" data-class="chp7">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 7: Short moment of peace</h5>
+        </div>
+        <div class="links-icon" data-class="chp8">
+          <img src="img/icon_rotg.png" alt="Chapter Icon" style="width: 50px; height: 50px;">
+          <h3>Chapter 8: The Last War</h5>
+        </div>
+      </div>
+      <div id="links-description">
+        <p class="linksdescription-text"></p>
+        <img id="links-main-image" src="" alt="Links Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid subs" id="download">
+  <div class="container">
+    <div class="row">
+      <h2 class="darktbgheadlines wow fadeInUp">Come Join the Fun.<span></span></h2>
+      <span class="formdescr wow fadeInRight">Just download, and Sign up!</span>
+      <form class="form-inline wow fadeInLeft">
+        <a href="https://fiesta.lanteacorp.com/FiestaOnline.7zip" class="red_btn option">Download Now!</a>
+        <a href="https://fiesta.lanteacorp.com" class="def_btn option">Register</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid social wow fadeInLeft">
+  <div class="container">
+    <div class="row">
+      <h2 class="lightbg wow fadeInUp">PC Requirements<span></span></h2>
+	
+      <table>
+        <tr>
+            <th>SYSTEM</th>
+            <th>Minimum Requirements</th>
+            <th>Recommended Requirements</th>
+        </tr>
+        <tr>
+            <td>OS</td>
+            <td>WindowsXP, Windows Vista</td>
+            <td>Windows 10 or Windows 11</td>
+        </tr>
+        <tr>
+            <td>CPU</td>
+            <td>Intel Pentium IV 1.6GHz or equivalent</td>
+            <td>Intel Core i5 or AMD Ryzen 5</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>512MB</td>
+            <td>8GB</td>
+        </tr>
+        <tr>
+            <td>HD SPACE</td>
+            <td>5GB</td>
+            <td>18GB SSD</td>
+        </tr>
+        <tr>
+            <td>GRAPHIC CARD</td>
+            <td>NVIDIA Geforce MX or equivalent</td>
+            <td>NVIDIA GeForce GTX 1050 or AMD Radeon RX 560</td>
+        </tr>
+        <tr>
+            <td>DIRECT X</td>
+            <td>DirectX 9.0c or higher</td>
+            <td>DirectX 12</td>
+        </tr>
+        <tr>
+            <td>CONNECTION SPEED</td>
+            <td>DSL (128kbps) or better</td>
+            <td>Broadband Internet connection</td>
+        </tr>
+    </table>
+    <span>*Also works with Parrallels Desktop 19 on macOS. (Intel or Apple Silicon)</span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid steps">
+  <div class="container">
+    <div class="row">
+      <h2 class="darktbgheadlines wow fadeInUp">How to play<span></span></h2>
+      <ul>
+        <li class="wow fadeInLeft">Register an account (<a href="https://fiesta.lanteacorp.com" onclick="location.href = 'https://fiesta.lanteacorp.com';">Click here!</a>)</li>
+        <li class="wow fadeInRight">Download our client (<a href="https://fiesta.lanteacorp.com/FiestaOnline.7zip">Click here!</a>)</li>
+        <li class="wow fadeInLeft">Install Fiesta Online</li>
+        <li class="wow fadeInRight">Let the Launcher patch your client, to keep you up to date.</li>
+        <li class="wow fadeInLeft">Launch and login to play Fiesta!</li>
+        <li class="wow fadeInRight">For support and news visit our forums (<a href="https://fiesta.lanteacorp.com">Click here!</a>)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid video">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 video-pr">
+        <div class="zetindex">
+          <h2 class="wow bounceInLeft darktbgheadlines">Experience the Adventure<span></span></h2>
+          <span class="wow fadeInRight">
+            Catch a glimpse of the epic journey ahead. Watch our gameplay trailer and see what awaits you in the fight to save Isya. 
+          </span>
+          <div class="btn_group wow fadeInRight">
+            <a href="https://fiesta.lanteacorp.com/FiestaOnline.7zip" class="border_btn white_btn option animated fadeInLeft">Download now!</a> <a href="http://fiesta.lanteacorp.com/patch/Fiesta_Setup.exe" class="red_btn option animated fadeInRight" onclick="location.href = 'http://85.25.213.204/Register.php';">Register an account</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 vidos">
+        <div class="zetindex">
+          <video width="560" height="315" controls>
+            <source src="img/Fiesta_Trailer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <span></span>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid subs">
+  <div class="container">
+    <div class="row">
+      <h2 class="darktbgheadlines wow fadeInUp">Check out our other Projects<span></span></h2>
+      <span class="formdescr wow fadeInRight">Turningpoint is another free to play MMORPG, where the sky is limit. Fly around, make friends, get an adorable pet.</span>
+      <form class="form-inline wow fadeInLeft">
+	    <a href="http://turningpoint.lanteacorp.com" class="red_btn option">Learn more!</a>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.links-icon').forEach(icon => {
+  icon.addEventListener('click', function() {
+    const classType = this.getAttribute('data-class');
+    const descriptionContainer = document.querySelector('.linksdescription-text');
+    const classMainImage = document.querySelector('#links-main-image');
+    
+    // Check if the description and image are already visible
+    if (descriptionContainer.style.display === 'block' && classMainImage.style.display === 'block') {
+      // Hide the description and image
+      descriptionContainer.style.display = 'none';
+      classMainImage.style.display = 'none';
+    } else {
+      // Show the description and image
+      let descriptionText = '';
+      let imgSrc = '';
+
+      switch(classType) {
+        case 'chp1':
+          descriptionText = `
+            <p>There was a being exceeding the existence of the gods. His name is Legel. He could create existence from nonexistence, also possessing the power to purify existence back to its original form. Legel created a huge and beautiful continent not in the world of eternity, but in the space called ‘time’. He shared his powers with the gods, gave birth to a new life on the continent. Legel loved the beautiful continent where small creatures lived. They learned to harmonize with the nature he created, and watching over them was Legel’s greatest pleasure.</p>
+            <p>However, there were gods jealous and desiring his pleasure and powers. The gods, blinded by jealousy and greed, joined forces and stole his holy body, pushing him into the space full of darkness to seal Legel into eternal darkness. The very moment Legel was being sucked into darkness he created Bijou who is somewhat like his other self. Legel fell into the deep darkness as he finished the duplicated creation of himself embodied with everything he had. The gods were astounded. Although they sealed Legel with all of their strength, Legel’s other self, Bijou, remained in this world. The frightened gods attempted once again to destroy Bijou’s existence.</p>
+            <p>A swirl of incredible power devastated the area. It seemed that even light, wind, and darkness were destroyed. Nonetheless, Bijou was not destroyed. He only fell asunder, scattered throughout the continent where creatures dwelt. The gods could be relieved for a while. They were certain that Bijou was unable to use his strength with himself broken in pieces. But that didn’t last long. One day the continent on the surface echoed with songs of blessing in the giant elven forest. It was the song of blessing at the discovery of one of Bijou’s pieces.</p>
+          `;
+          imgSrc = 'img/tbd.png';
+          break;
+        case 'chp2':
+          descriptionText = `
+            <p>Holy Bijou was considered to be a blessing from the gods by the elves. Because of Bijou, the woods grew wide and crops could grow rapidly. Bijou’s land could become beautiful and abundant like a Utopian land. However, this divine song was ruined by the gods. The gods, blinded with fear, joined forces once again. Since they did not have the complete power of creation, they gave birth to a new monster, mixing their blood with the souls of creatures. These dark creatures were sent to the surface of the continent and spewed dark power to stop Bijou’s powers and insanely began destroying the continent, digging underground and emptying out lakes. The once beautiful Isya continent full of creatures and endless woods was being destroyed by the foolishness and greediness of the gods. The order of the continent was mercilessly corrupted and countless creatures vanished as preys to the monsters. The elves realised that these monsters that suddenly appeared on the continent killing many things and destroying the woods were the new creation of gods. They came to the decision that they couldn’t just stand and watch their continent wither and die. The lovely animals were slaughtered by merciless monsters for no reason and old trees that lived for thousands of years turned to ashes in the blink of an eye.</p>
+            <p>They had to make a decision. The elves broke their unconditional rule of not going to war with another clan and confronted the gods to preserve the continent. However, not everything went off easily as planned. For centuries they never even thought of going to war as they found war to be useless. There were many elves who did not even know how to use weapons and magic. What’s worse, Jenira, the chief of another forest, disobeyed Elderine, the ruler and defender of the elven tribe, claiming that his tribe would not participate in the war. He claimed that he and his men would hide until the monsters calm down, even if the continent burns to the ground.</p>
+            <p>“Jenira! Just how long do you think you can hide?”</p>
+            <p>“Don’t be a fool Elderine! What can we possibly do? How on earth are we going to defeat the powerful monsters created by that gods?! This is blasphemy! Stop your stupidity!”</p>
+            <p>“The gods do not realise their actions are foolish! Are you just going to stand by idly!? Do you know how many forests are being burned every day?! And the lovely animals! Can’t you hear the screaming of trees that lived hundreds and thousands of years more than us?!”</p>
+            <p>Elderine’s loud voice echoed through the deep woods. Elves on the verge of tears felt so ashamed. The whole time they had been retreating through fear, even when they are supposed to cherish and protect all living creatures. It was in that very moment. Somebody shouted.</p>
+            <p>“We’re not afraid!”</p>
+            <p>“We’re strong!”</p>
+            <p>”The elves will not be indifferent to the woods!”</p>
+            <p>“We will protect them!”</p>
+            <p>The elves’ great outcry could be heard even from the lofty sky. Elderine smiled with pleasure watching Jenira’s abashed face. As if repaying Elderine and the elves’ oath, the battle was victorious. The monsters were outnumbered and were only created to take life, unlike the elves. The elves were smart with great agility.</p>
+            <p>However, the joy of victory was shadowed behind the fight. Endless waves of monsters and a more powerful darkness, growing as night time came, made the elves worn out. Nevertheless, Elderine and her elven army stood tall. The gods had finally found a solution to end this war. It was to arouse inner conflict. Epith had always desired to be the leader. He was just the right target for the gods. Pagels, the god of greed, tainted his good spirit with greed. Finally, Epith committed a terrible deed by fighting his fellow elves and killing comrades. Elderine fell into deep sadness and left her brother who became the henchman of the gods. She journeyed the long path far away from the elven woods of eternity.</p>
+          `;
+          imgSrc = 'img/tbd2.png';
+          break;
+        case 'chp3':
+          descriptionText = `
+            <p>My wise and preserving elves! Remember our sadness this day! We must leave our home we thought would last forever and find a new place. Don’t forget the spirit of our poor comrades! Remember their noble sacrifice! For those who have betrayed us, will realise. They will suffer more than we did. They will feel pain a hundred times more than we did!” Elderine’s journey seemed endless. The continent was devastated much more than she thought.</p>
+            <p>“Oh my god, the continent used to be full of leafy trees but now…”</p>
+            <p>“Great Elderine, do not blame yourself. Your sorrow is our sorrow.”</p>
+            <p>“My grieving is beyond words. Why are the gods repeating foolish acts?”</p>
+            <p>“They too are merely weaklings imprisoned by their own greed. Please overcome your sadness and give hope to yourself and your followers.”</p>
+            <p>“You’re right. I could never take away their hope.”</p>
+            <p>Elderine’s followers, the chiefs, and elves never lost hope. Finally, they reached the Deep South, the far end of the continent where they were safe from the hands of the monsters. There they encountered a new species they had never seen before. They were called “humans”, they also came from far away on the continent, with a good and innocent spirit. They were much more different than expected. They ate meat, which elves do not. They also cooked, cut down trees, and built houses. They lived a life difficult to understand for the elves, since elves controlled both ‘destruction’ and ‘harmony’.</p>
+            <p>“Why do you kill the living and ingest their nutrients? You can still live without eating meat.”</p>
+            <p>Wise Elderine advised them. The most elder among the humans came out and answered.</p>
+            <p>“We humans are not as strong as you elves, nor can we live as long as you do. We cannot continue living with only a small amount of fruit and water. We are much weaker and humble compared to your kind, but we can live by staying together as one. We eat both meat and crops that we grow from the land. It is not enough to live from the scraps we find, we must plant seeds and harvest crops. We need a lot of energy and live the blessing called life for a short time. We may be weak as one, but with unflinching team spirit we can be strong.”</p>
+            <p>Although humans live a short life compared to elves, Elderine could not help admiring them. She thought that elves too would have no choice but to live as the humans if they are given a short lifetime. They were not arrogant or vicious, living a happy, peaceful life only for themselves in harmony with nature.</p>
+            <p>“We thought only our lives were the true way to live all this time. But your lives are true and righteous. I, Elderine, the mother of all elves, wish to live with humans in peace and harmony. In the land full of bless given by Legel”.</p>
+          `;
+          imgSrc = 'img/tbd3.png';
+          break;
+        case 'chp4':
+          descriptionText = `
+            <p>As she hoped for, the humans lived in harmony with the elves embracing them with warm hearts. And so the city of trust and pledge, Elderine, was built. Time went by fast and Elderine city became larger and stronger. However, the monsters marched down to the south after realising there was nowhere else to look for Bijou.</p>
+            <p>They began to slaughter all trees and the living once again. The elves and humans fought back the best they could, but the fortress trembled like a sand castle in front of more countless monsters. That wasn’t all. Epith and his men stepped into the battle. They attacked the humans and elves with their massive power. The elven and human line of defence was in a desperate situation. Countless people lost their loved ones and children, grieving in despair. Elderine thought this massacre could last no more. She hoped this war could end by sacrificing herself. Eventually, when the sun rose and the monsters hid, Elderine went to Epith, alone.</p>
+            <p>“Epith, you once cherished and loved the living. How could you turn into such an evil person? The oaks and lime trees you loved, but now all of them have been turned to ashes and fallen into oblivion. Don’t you know you will never be blessed with the land under the shades of the trees?”</p>
+            <p>“My beautiful and naive sister, they are all the creation of the gods anyway. Even if they are burned down to nothing at all, in god’s power it can be created again whenever. If we just destroy all the pieces of Bijou!”</p>
+            <p>“Epith! That is not true! Have you forgotten the power of Bijou? It brings growth to the woods and makes the land more fruitful! And you’re trying to destroy that power! You mustn’t be used by the gods’ foolish jealousy!!”</p>
+            <p>“That’s enough! I don’t want to hear anymore! Go away!”</p>
+            <p>The sacred elven magic had been smeared with darkness. Epith’s blasphemous words of destruction covered with his darkened heart were no longer the innocent elf once blessed by Legel. Despite Elderine’s desperate cry and tears, Epith held her captive in a prison deep in the darkness.</p>
+            <p>“Epith! Please come back!”</p>
+            <p>Her scream endlessly echoed around Epith’s ears. His lovely sister, smart and wise Elderine. Everyone followed and respected her so she believed that he would do the same. However, one moment of jealousy estranged him from Elderine. He reached out for the forces of darkness and everything was smeared with darkness in the blink of an eye. He thought it was too late for him. He was already defiled. He could only struggle in regret and in the swamp of despair because he locked up his sister in the dark prison. It was then. A light flashed and all vision was covered with a bright light. It was the first shining light Epith had seen since he was defiled by the dark forces. He had turned his back on the blessed sun. Yet he couldn’t pull himself together in the face of the light.</p>
+            <p>“Elderine!”</p>
+            <p>Someone’s voice...Epith witnessed a glowing man rescuing his sister from the crumbling dark prison. It was a human. He was a weak man called “Human”. This can’t be. How can a human being destroy the prison of darkness? That is protected by the power of the gods!” A human being destroyed the prison of darkness built by the gods to captivate Elderine. This human was extremely dazzling. He shone so brightly that no one could open their eyes. His faith and desire for life were like that never seen before on Isya.</p>
+            <p>“No!!”</p>
+            <p>A sharp blade penetrated the skin, the voice of the lovely sister echoed. No pain was felt. Instead, sorrow burst. Elderine was standing in front of Epith. Knight Roumen’s sharp blade penetrated her chest as Roumen tried to kill Epith.</p>
+            <p>“Sir Epith!!”</p>
+            <p>The fallen elves rushed in. Roumen quickly carried Elderine on his back and escaped. Epith kneeled in silence, giving no orders at all. He could only shed tears.</p>
+          `;
+          imgSrc = 'img/tbd.png';
+          break;
+        case 'chp5':
+          descriptionText = `
+            <p>Roumen returned to the city with an injured Elderine and told the story of what happened to the humans and elves. He held his sword high up into the sky, pledging that he would fight back with all his faith and his own life. A deep darkness covered the land and the forces of darkness launched attacks on them. Countless numbers of monsters rushed rapidly blocking all the arrows the elves were shooting and broke down the castle walls. When all the monsters attacked at once, the elves and humans were no longer able to defend themselves. Many elves and humans bled to death. Elderine came out to the battlefield with her wounded body. Far away she could see Epith. Her brother’s eye color turned black and his hair color turned grey. Epith looked into her eyes and raised his hand up high. Elderine shut her eyes tight. The humans and elves were no match for the fallen elves who were over ten times stronger and faster than the monsters.</p>
+            <p>At that very moment, something unbelievable happened. The fallen elves suddenly started attacking the monsters with incredible speed. The monsters were wiped out without resistance by this totally unexpected attack. Elderine’s shaking eyes were facing Epith. He madly attacked the monsters as if trying to make up for his sins. Elderine’s heart became warm. She started casting a spell with all her spirit towards Roumen.</p>
+            <p>“Attack!! Follow me!!”</p>
+            <p>Roumen shouted with his brave voice. The light that burst out of Elderine’s chest spread into the night sky. The light of bless filled the hearts of both elves and humans. The fallen elves, once blinded by greed, cheered with happiness that their spirits had returned to their souls. They weren’t completely defiled. They were only hypnotised by the god of greed. The elves begged for forgiveness of their sins, kneeling in front of Elderine. Elderine said she would willingly forgive them. She was always willing to forgive those who sought forgiveness. Elderine looked for Epith, calling his name thinking he would be lying somewhere wounded. Yet she couldn’t find Epith anywhere in the bloodshed battlefield. No dead body, no trace whatsoever. Epith left because he couldn’t forgive his blunder. Roumen kindly talked to Elderine. She had been grieving all night. Epith did not leave you for good. He must have thought there was no way to cleanse his sins. He only went on a journey far away for atonement. Elderine could overcome her sadness thanks to Roumen’s words. She gave the elves of Epith that came back to the world of light a new name: “Dark Elf”, and embraced them as eternal companions. Also, she built a tall tower made of stone to praise the harmony between humans, elves, and dark elves and also so that Epith may return at any time.</p>
+          `;
+          imgSrc = 'img/tbd.png';
+          break;
+        case 'chp6':
+          descriptionText = `
+            <p>Each clan’s chief gathered their opinions and agreed to build a strong state with Elderine as the main axis. Also, they declared the Oath of Hednis to the entire Isya continent for eternal harmony and the beginning of the three clans. The strong bond between humans, elves, and even dark elves, brought great progress and abundance to the continent, and the monsters no longer led foot on the blessed land. However, the gods did not stand by. The infuriated gods did not send monsters anymore. The gods began to curse the continent and planned to annihilate the Hednis alliance so they would never live a life full of bliss.</p>
+            <p>The sun that shined on the continent was hidden. Dark clouds filled the sky and hail fell down from the summer sky. Blazing giant meteors fell down to the continent and on some days the sun would shine with an intense heat the whole day. Sometimes blizzards came and froze every home and the land and a huge wave wiped out villages. These disasters were made to break the will of the people, but the bond between Elderine and the alliance would not weaken. On the contrary, the bond strengthened and they managed to endure this suffering.</p>
+            <p>Elderine prayed every day, holding Bijou’s fragment tightly. She prayed every day that these catastrophes were merely a bump on the road to a bright future and blessing, and that everyone would be guided by blessing.</p>
+            <p>Time went by, day after day, and people left the world one by one. But even death couldn’t challenge their faith. It was through this test and these hardships that the people learned to strengthen their will and that their spirits would not be so easily broken. Elderine shouted at Bijou.</p>
+            <p>“No matter how much you test us, we will never give up!!”</p>
+            <p>Did Bijou listen to her strong desire? Bijou never answered her prayers, but this time it started to glow. Bijou’s piece shot a large pillar of light into the sky. All the pieces of Bijou throughout the continent started to shoot up a pillar of light into the sky. Sweet raindrops started to fall on the dry land, and one by one seeds of life started to grow. Life began to bloom again as the world returned to its beautiful form. The pillars of light turned the Isya continent back to a shining and wonderful place. Later on people saluted Legel’s blessing and called that day the ‘Purification of Light’.</p>
+          `;
+          imgSrc = 'img/tbd.png';
+          break;
+        case 'chp7':
+          descriptionText = `
+            <p>After the purification of light, Isya regained its original form and maintained peace. Many new lives were born, green trees and songs of the living made the land much more abundant.</p>
+            <p>The gods were losing reason through fear and fury. They had no choice but to kneel in front of Legel’s endless vitality. Although, without a body or soul, Legel’s powers were proven great. The human, elf, and dark elf alliance advanced much more and spread many settlements all over the continent, preserving calm and peace.</p>
+            <p>Finally, Elderine and Roumen passed away and many heroes and heroines among humans, elves, and dark elves passed away, leaving their wishes and dreams behind on the continent. Their legacy called ‘dream’ and ‘union’ were a gift to all the descendants living on the Isya continent, warmly guiding them to grow up stronger and wiser. This peaceful time lasted for a long time, indeed. However, Bijou’s blessing and the purification of light were gradually forgotten by humans and elves. The gods found peace, but the god of death and destruction ‘Markis’ didn’t. He couldn’t find peace in death and destruction and he reached out to Pagels, the god of greed, Nik, the god of darkness, and Apoline, the god of desire and despair, and persuaded them to turn the world into total chaos. The gods in charge of life tried to stop them, but they were banished into the land by the other gods’ dark force with theor hearts and strength being stolen.</p>
+            <p>The gods banished to the land regretted their foolishness and scattered throughout various places on the Isya continent. Nature, the god of trees and nature, lonely wandered the woods and turned into a wild rosebush. Cypian, the god of animals and small living beings, wept with the animals in the woods everyday. Enid, the god of war, went on a long journey in search of redemption. Teva, the goddess of hope, was saved by the Hednis alliance and she promised to protect and bless them.</p>
+          `;
+          imgSrc = 'img/tbd.png';
+          break;
+          case 'chp8':
+          descriptionText = `
+            <p>The gods of darkness swore to eliminate the alliance in the land for crumbling their pride. Finally pledging to bring total chaos and darkness to the world. For this evil plan, the gods descended upon the land, sliced the continent in half, and covered all mountains and fields with lava, wiping out villages with a massive wave. The Isya continent no longer had any hopes to hold on to, nothing to rely on. Many elves and humans ran away in fear or were killed.</p>
+            <p>Half the Isya continent was devastated, lives were ending constantly. The gods realized it wasn’t enough to completely destroy the continent on their own, and summoned the undead: dark forces from the realm of the dead. With this undead army they marched into the land of the alliance with great speed. The gods of darkness and the Hednis alliance fought once again on the fields of shadow. Most of the warriors lost their lives in this battle over the transom. However, Teva, the goddess of Hope, protected them. The surviving warriors escaped safely and evacuated their children and women, heading to the far north. There they encountered Enid, the god of war.</p>
+            <p>Enid gave the surviving warriors his vitality and 3 pieces of Bijou and jumped into battle against the gods, alone. Teva and the Hednis warriors followed him to fight against the gods of darkness, giving their lives for victory and fighting to the very last breath. Their faith and noble will matched Bijou’s desire. Finally, the gods of darkness lost all their strength and were banished into the deep depths of the land. The remaining warriors prepared for their brave deaths. Teva too prepared for her final end, following Enid, the god of war, who vanished without a trace. However, Bijou had not forsaken them completely. Teva could open her eyes again by Bijou’s holy light, and could save all the people and warriors from dying.</p>
+            <p>Teva had consumed all her given strength. She sent a final message to the warriors about the power they had forgotten, and what it is they should protect.</p>
+            <p>“The gods of darkness may have been banished, but they might come back should you forget the power and will of Bijou, to bring total destruction to the world. The only way to stop them for good is to find all the pieces of Bijou.”</p>
+            <p>With this message Teva fell into a deep slumber not knowing when she would wake up again. The Hednis warriors realized that the only way to save the humans and elves was to retrieve the forgotten pieces of Bijou and rebuild the towers of Bijou in Elderine, Roumen, and Epith on the destroyed continent to praise their spirit. They formed the Hednis alliance mission, which consisted of adventurers to go on a tough and long journey to find the broken pieces of Bijou all over the continent to save Isya.</p>
+          `;
+          imgSrc = 'img/tbd.png';
+          break;
+      }
+
+      descriptionContainer.innerHTML = descriptionText;
+      classMainImage.src = imgSrc;
+      descriptionContainer.style.display = 'block';
+      classMainImage.style.display = 'block';
+    }
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.class-icon').forEach(icon => {
+  icon.addEventListener('click', function() {
+    const classType = this.getAttribute('data-class');
+    const descriptionContainer = document.querySelector('.description-text');
+    const classMainImage = document.querySelector('#class-main-image');
+    
+    // Check if the description and image are already visible
+    if (descriptionContainer.style.display === 'block' && classMainImage.style.display === 'block') {
+      // Hide the description and image
+      descriptionContainer.style.display = 'none';
+      classMainImage.style.display = 'none';
+    } else {
+      // Show the description and image
+      let descriptionText = '';
+      let imgSrc = '';
+
+      switch(classType) {
+        case 'archer':
+          descriptionText = `
+            <p>Archer are highly qualified experts with a wide range of deadly bows and crossbows. As they gather lots of different poisons on their journey through nature they are quite deadly adversaries.</p>
+            <p>In a group they can easily combat faraway enemies or use their poisons to defeat large groups of opponents.</p>
+          `;
+          imgSrc = 'img/class-archer.png';
+          break;
+        case 'crusader':
+          descriptionText = `
+            <p>The Crusaders left Isya many years ago to discover the world - but they are back now! As keeper of the old elfin nobility the Crusader uses magical 2-handed blades in combat.</p>
+            <p>The imps, small tricky monsters, will try to rout everyone that is trying to get close to them.</p>
+          `;
+          imgSrc = 'img/class-crusader.png';
+          break;
+        case 'cleric':
+          descriptionText = `
+            <p>The Cleric is a great supporting class. They use hammers, maces and shields to fight. With the power of faith they can conjure mighty healing spells and also increase the magical skills of their allies.</p>
+            <p>Reviving other players is also one of their specialties to support their team.</p>
+          `;
+          imgSrc = 'img/class-cleric.png';
+          break;
+        case 'fighter':
+          descriptionText = `
+            <p>The fighter is a very strong melee class. They relentlessly steeled their body to gain force and endurance. They use swords, shields and axes to crush their enemies in combat.</p>
+            <p>Fighter will lead their team to victory - especially against stronger enemies.</p>
+          `;
+          imgSrc = 'img/class-fighter.png';
+          break;
+        case 'mage':
+          descriptionText = `
+            <p>The Mage is a scary fighter. By using their elemental skills they can conjure fiery, icy or lightning attacks on far away enemies.</p>
+            <p>In a group Mages can contain large groups of enemies and deal lots of damage to them. Mighty staves or wands are the weapon of their choice.</p>
+          `;
+          imgSrc = 'img/class-mage.png';
+          break;
+        case 'joker':
+          descriptionText = `
+            <p>Tricksters are known to jump into fights like a berserk. With claws or double blades they slash their enemies and jar everyone with their fast and fancy moves.</p>
+            <p>In a group they usually fight beside the Fighter and deal lots of melee damage. They can also flank their enemies and deal devastating blows which make the Trickster a fast dashing class.</p>
+          `;
+          imgSrc = 'img/class-joker.png';
+          break;
+      }
+
+      descriptionContainer.innerHTML = descriptionText;
+      classMainImage.src = imgSrc;
+      descriptionContainer.style.display = 'block';
+      classMainImage.style.display = 'block';
+    }
+  });
+});
+</script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+<script src="js/bootstrap.min.html"></script>
+<script type="text/javascript">
+  function setHeiHeight() {
+     "use strict";
+    $('.block_one').css({
+      height: $(window).height() + 'px'
+    });
+  }
+setHeiHeight(); 
+$(window).resize( setHeiHeight );
+</script>
+<script src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox.min.js"></script>
+</body>
+</html>
