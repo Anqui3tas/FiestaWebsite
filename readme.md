@@ -29,27 +29,26 @@ To use this template, follow the instructions below.
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/fiesta-online-template.git
+   git clone https://github.com/Anqui3tas/FiestaWebsite.git
 
 2. Navigate to the project folder:
    ```bash
    cd fiesta-online-template
 
-3. Open index.html in your preferred code editor to start customizing.
-   ```bash
+3. Open `index.html` in your preferred code editor to start customizing.
 
 ## Customizing the Template
 
-1. **Class Icons**: Add your own icons by replacing the existing ones in the `assets/icons/` folder.
+1. **Class Icons**: Add your own icons by replacing the existing ones in the `/img` folder.
    ![Class Icons Screenshot](readme_images/ClassIcons.png)
    
 2. **Class Descriptions**: Update the text and images for each class in the `index.html` file.
    ![Class Descriptions Screenshot](readme_images/ClassDescriptions.png)
    
-3. **Images**: Replace the main class images in the `assets/images/` folder.
+3. **Images**: Replace the main class images in the `/img` folder.
    ![Main Class Images Screenshot](readme_images/ClassSelection.png)
    
-4. **Parallax Effect**: Modify the parallax effect speed and behavior in the `script.js` file if needed.
+4. **Parallax Effect**: Modify the parallax effect speed and behavior in the `js/parallax.js` file if needed.
 
 ## Deployment
 
