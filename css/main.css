@@ -196,6 +196,10 @@ display: block;
 margin-bottom: 60px;
 }
 
+
+
+
+
 /* links */
 .links-container {
   display: flex;
@@ -209,14 +213,7 @@ margin-bottom: 60px;
 .links-icon {
   text-align: center;
   cursor: pointer;
-}
-
-.links-icon img {
-  transition: transform 0.3s ease;
-}
-
-.links-icon:hover img {
-  transform: scale(1.1);
+  position: relative;
 }
 
 .links-icon h3 {
@@ -248,6 +245,9 @@ margin-bottom: 60px;
 }
 
 
+
+
+
 /* Features */
 .class-container {
   display: flex;
@@ -260,41 +260,79 @@ margin-bottom: 60px;
 .class-icon {
   text-align: center;
   cursor: pointer;
+  position: relative;
 }
 
 .class-icon img {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+.class-icon[data-class="archer"] img {
+  content: url('../img/class-icon-archer-static.png'); /* Default icon for archer */
+}
 .class-icon[data-class="archer"]:hover img {
   transform: scale(1.1);
-  content: url('../img/class-icon-archer-shadow.png'); /* Change the image URL on hover */
+  content: url('../img/class-icon-archer-hover.png'); /* Hover icon for archer */
+}
+.class-icon[data-class="archer"].clicked img {
+  content: url('../img/class-icon-archer-active.png'); /* Clicked icon for archer */
 }
 
+.class-icon[data-class="crusader"] img {
+  content: url('../img/class-icon-crusader-static.png'); /* Default icon for crusader */
+}
 .class-icon[data-class="crusader"]:hover img {
   transform: scale(1.1);
-  content: url('../img/class-icon-crusader-shadow.png'); /* Change the image URL on hover */
+  content: url('../img/class-icon-crusader-hover.png'); /* Hover icon for crusader */
+}
+.class-icon[data-class="crusader"].clicked img {
+  content: url('../img/class-icon-crusader-active.png'); /* Clicked icon for crusader */
 }
 
+.class-icon[data-class="cleric"] img {
+  content: url('../img/class-icon-cleric-static.png'); /* Default icon for crusader */
+}
 .class-icon[data-class="cleric"]:hover img {
   transform: scale(1.1);
-  content: url('../img/class-icon-cleric-shadow.png'); /* Change the image URL on hover */
+  content: url('../img/class-icon-cleric-hover.png'); /* Hover icon for crusader */
+}
+.class-icon[data-class="cleric"].clicked img {
+  content: url('../img/class-icon-cleric-active.png'); /* Clicked icon for crusader */
 }
 
+.class-icon[data-class="fighter"] img {
+  content: url('../img/class-icon-fighter-static.png'); /* Default icon for crusader */
+}
 .class-icon[data-class="fighter"]:hover img {
   transform: scale(1.1);
-  content: url('../img/class-icon-fighter-shadow.png'); /* Change the image URL on hover */
+  content: url('../img/class-icon-fighter-hover.png'); /* Hover icon for crusader */
+}
+.class-icon[data-class="fighter"].clicked img {
+  content: url('../img/class-icon-fighter-active.png'); /* Clicked icon for crusader */
 }
 
+.class-icon[data-class="mage"] img {
+  content: url('../img/class-icon-mage-static.png'); /* Default icon for crusader */
+}
 .class-icon[data-class="mage"]:hover img {
   transform: scale(1.1);
-  content: url('../img/class-icon-mage-shadow.png'); /* Change the image URL on hover */
+  content: url('../img/class-icon-mage-hover.png'); /* Hover icon for crusader */
+}
+.class-icon[data-class="mage"].clicked img {
+  content: url('../img/class-icon-mage-active.png'); /* Clicked icon for crusader */
 }
 
+.class-icon[data-class="joker"] img {
+  content: url('../img/class-icon-joker-static.png'); /* Default icon for crusader */
+}
 .class-icon[data-class="joker"]:hover img {
   transform: scale(1.1);
-  content: url('../img/class-icon-joker-shadow.png'); /* Change the image URL on hover */
+  content: url('../img/class-icon-joker-hover.png'); /* Hover icon for crusader */
 }
+.class-icon[data-class="joker"].clicked img {
+  content: url('../img/class-icon-joker-active.png'); /* Clicked icon for crusader */
+}
+
 
 .class-icon h3 {
   font-family: roboto; /* Set your desired font family here */
@@ -321,6 +359,7 @@ margin-bottom: 60px;
 .description-text p {
   margin: 10px 0;
 }
+
 
 
 
