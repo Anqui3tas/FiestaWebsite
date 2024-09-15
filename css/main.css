@@ -216,32 +216,36 @@ margin-bottom: 60px;
   position: relative;
 }
 
+.links-icon img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
 .links-icon h3 {
-  font-family: roboto; /* Set your desired font family here */
-  font-size: 20px; /* Adjust font size */
-  font-weight: 350; /* Adjust font weight */
-  color: #000000; /* Change the color of the text */
-  margin-top: 15px; /* Add some space between the image and text */
-  white-space: pre-line; /* Allows text to wrap */
-  word-wrap: break-word; /* Breaks long words to fit within the container */
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: 350;
+  color: #000000;
+  margin-top: 15px;
+  white-space: pre-line;
+  word-wrap: break-word;
 }
 
-#links-description {
-  text-align: center;
-  margin-top: 20px;
+/* Set the default static image */
+.links-icon img {
+  content: url('../img/class-icon-story-static.png');
 }
 
-#links-main-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  margin: 10px auto;
-  margin-top: 10px;
-  display: none; /* Initially hidden */
+/* Hover state: change to the hover image */
+.links-icon:hover img {
+  content: url('../img/class-icon-story-hover.png');
+  transform: scale(1.1); /* Optional: slight zoom effect on hover */
 }
 
-.linksdescription-text p {
-  margin: 10px 0;
+/* Active state: change to the active image */
+.links-icon.active img {
+  content: url('../img/class-icon-story-active.png');
 }
 
 
