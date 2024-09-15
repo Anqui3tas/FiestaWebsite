@@ -133,18 +133,18 @@
   </div>
 </div>
 
-<div class="container-fluid subs" id="download">
+<div class="container-fluid subs" id="register">
   <div class="container">
     <div class="row">
       <h2 class="darktbgheadlines wow fadeInUp">Come Join the Fun.<span></span></h2>
       <span class="formdescr wow fadeInRight">Just download, and Sign up!</span>
-      <form class="form-inline wow fadeInLeft" action="https://sql.lanteacorp.com/register.php" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="rpassword" placeholder="Re-enter Password">
-        <input type="submit" name="submit" value="Register">
+      <form id="registerForm" class="form-inline wow fadeInLeft">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="rpassword" name="rpassword" placeholder="Re-enter Password" required>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <div id="statusMessage"></div>
       </form>
-      <a href="https://fiesta.lanteacorp.com/FiestaOnline.7zip" class="red_btn option">Download Now!</a>
     </div>
   </div>
 </div>
@@ -481,5 +481,29 @@ $(window).resize( setHeiHeight );
 <script src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.lightbox.min.js"></script>
+<script>
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+  
+      var formData = new FormData(this);
+      var statusMessage = document.getElementById('statusMessage');
+  
+      fetch('register.php', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              statusMessage.innerHTML = '<span style="color: green;">' + data.message + '</span>';
+          } else {
+              statusMessage.innerHTML = '<span style="color: red;">' + data.message + '</span>';
+          }
+      })
+      .catch(error => {
+          statusMessage.innerHTML = '<span style="color: red;">An error occurred. Please try again later.</span>';
+      });
+  });
+  </script>
 </body>
 </html>
