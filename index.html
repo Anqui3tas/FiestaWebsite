@@ -127,7 +127,7 @@
       </div>
       <div id="links-description">
         <p class="linksdescription-text"></p>
-        <img id="links-main-image" src="" alt="Links Image">
+        <img id="links-main-image" src="img/class-story-0.png" alt="Fiesta History">
       </div>
     </div>
   </div>
@@ -135,17 +135,20 @@
 
 <div class="container-fluid subs" id="register">
   <div class="container">
-    <div class="row">
-      <h2 class="darktbgheadlines wow fadeInUp">Come Join the Fun.<span></span></h2>
-      <span class="formdescr wow fadeInRight">Just download, and Sign up!</span>
-      <form id="registerForm" class="form-inline wow fadeInLeft">
-        <input type="text" id="username" name="username" placeholder="Username" required>
-        <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="password" id="rpassword" name="rpassword" placeholder="Re-enter Password" required>
-        <button type="submit" class="btn btn-primary">Register</button>
-        <div id="statusMessage"></div>
-      </form>
-    </div>
+      <div class="row">
+          <h2 class="darktbgheadlines wow fadeInUp">Come Join the Fun.<span></span></h2>
+          <span class="formdescr wow fadeInRight">Register Below</span>
+          <form id="registerForm">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              <label for="rpassword">Repeat Password:</label>
+              <input type="password" id="rpassword" name="rpassword" required>
+              <button type="submit">Register</button>
+          </form>
+          <div id="statusMessage"></div>
+      </div>
   </div>
 </div>
 
@@ -206,12 +209,12 @@
     <div class="row">
       <h2 class="darktbgheadlines wow fadeInUp">How to play<span></span></h2>
       <ul>
-        <li class="wow fadeInLeft">Register an account (<a href="https://fiesta.lanteacorp.com" onclick="location.href = 'https://fiesta.lanteacorp.com';">Click here!</a>)</li>
+        <li class="wow fadeInLeft">Register an account (<a class="scroll-to-register" href="#register">Register</a>)</li>
         <li class="wow fadeInRight">Download our client (<a href="https://fiesta.lanteacorp.com/FiestaOnline.7zip">Click here!</a>)</li>
-        <li class="wow fadeInLeft">Install Fiesta Online</li>
+        <li class="wow fadeInLeft">Extract Fiesta Online and run the Launcher</li>
         <li class="wow fadeInRight">Let the Launcher patch your client, to keep you up to date.</li>
         <li class="wow fadeInLeft">Launch and login to play Fiesta!</li>
-        <li class="wow fadeInRight">For support and news visit our forums (<a href="https://fiesta.lanteacorp.com">Click here!</a>)</li>
+        <li class="wow fadeInRight">For support and news visit our forums (<a href="https://fiesta.lanteacorp.com">Coming Soon!</a>)</li>
       </ul>
     </div>
   </div>
@@ -227,7 +230,7 @@
             Catch a glimpse of the epic journey ahead. Watch our gameplay trailer and see what awaits you in the fight to save Isya. 
           </span>
           <div class="btn_group wow fadeInRight">
-            <a href="https://fiesta.lanteacorp.com/FiestaOnline.7zip" class="border_btn white_btn option animated fadeInLeft">Download now!</a> <a href="http://fiesta.lanteacorp.com/patch/Fiesta_Setup.exe" class="red_btn option animated fadeInRight" onclick="location.href = 'http://85.25.213.204/Register.php';">Register an account</a>
+            <a href="https://fiesta.lanteacorp.com/FiestaOnline.7zip" class="border_btn white_btn option animated fadeInLeft">Download now!</a> <a href="#register" class="red_btn option animated fadeInRight">Register</a>
           </div>
         </div>
       </div>
@@ -488,7 +491,7 @@ $(window).resize( setHeiHeight );
       var formData = new FormData(this);
       var statusMessage = document.getElementById('statusMessage');
   
-      fetch('register.php', {
+      fetch('https://sql.lanteacorp.com/register.php', {
           method: 'POST',
           body: formData
       })
@@ -504,6 +507,6 @@ $(window).resize( setHeiHeight );
           statusMessage.innerHTML = '<span style="color: red;">An error occurred. Please try again later.</span>';
       });
   });
-  </script>
+</script>
 </body>
 </html>
