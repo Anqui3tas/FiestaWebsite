@@ -52,12 +52,12 @@ h2.darktbgheadlines span {
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 50px 0;
+  padding: 70px 0; /* Increased padding for more space */
 }
 
 .logo {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 0; /* Adjusted to avoid excessive spacing */
 }
 
 .logo img {
@@ -69,7 +69,7 @@ h2.darktbgheadlines span {
 
 .one_block_cont {
   position: relative;
-  padding: 100px 30px;
+  padding: 70px 30px; /* Adjusted padding to ensure enough space around the text */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -83,6 +83,7 @@ h2.darktbgheadlines span {
   color: #ffffff;
   font-weight: 400;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px; /* Added margin-top for spacing from heading */
 }
 
 .one_block_cont h1 {
@@ -92,7 +93,7 @@ h2.darktbgheadlines span {
   font-weight: 500;
   text-align: center;
   font-size: 52px;
-  margin: 0px;
+  margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -107,9 +108,9 @@ h2.darktbgheadlines span {
 /* Phone Image */
 .phone_img {
   position: absolute;
-  bottom: 0;
+  bottom: -20px; /* Adjusted to ensure it doesn’t overlap the content */
   left: 50%;
-  transform: translateX(-568px);
+  transform: translateX(-50%);
 }
 
 /* Block Two */
