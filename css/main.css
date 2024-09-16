@@ -1,44 +1,58 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500,900);
+
+/* General Styles */
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Headline Styles */
 h2.lightbg {
-color: #131313;
-text-transform: uppercase;
-text-align: center;
-font-size: 36px;
-font-weight: 100;
-font-family: roboto;
+  color: #131313;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
 }
-h2.lightbg span  {
-width: 150px;
-height: 2px;
-background: #00b7f4;
-margin: 30px auto;
-display: block;
+
+h2.lightbg span {
+  width: 150px;
+  height: 2px;
+  background: #00b7f4;
+  margin: 30px auto;
+  display: block;
 }
-h2.darktbgheadlines  {
-color: #ffffff;
-text-transform: uppercase;
-text-align: center;
-font-size: 36px;
-font-weight: 100;
-font-family: roboto;
+
+h2.darktbgheadlines {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
 }
+
 h2.darktbgheadlines span {
-width: 150px;
-height: 2px;
-background: #3B9ECE;
-margin: 30px auto;
-display: block;
+  width: 150px;
+  height: 2px;
+  background: #3B9ECE;
+  margin: 30px auto;
+  display: block;
 }
-body {overflow-x: hidden;}
+
+/* Block One */
 .block_one {
   background-color: #1c2532;
-  position: relative;
   background-image: url(../img/one_bg.png);
-  overflow: auto;
-  background-repeat: no-repeat; /* Prevent background repetition */
-  background-size: cover; /* Ensure the background covers the entire area */
-  background-position: center; /* Position the background image at the center */
-  text-align: center; /* Center text within this container */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 50px 0;
 }
 
 .logo {
@@ -54,47 +68,32 @@ body {overflow-x: hidden;}
 }
 
 .one_block_cont {
-  position: relative; /* Change to relative positioning */
-  padding: 100px 30px; /* Add top padding to ensure it's below the logo */
+  position: relative;
+  padding: 100px 30px;
   max-width: 1200px;
-  margin: 0 auto; /* Center horizontally */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #000;
-  padding: 8px;
-  text-align: center; /* Fixed text alignment for table cells */
-}
-
-th {
-  background-color: #f2f2f2;
+  margin: 0 auto;
 }
 
 .one_block_cont span {
   font-size: 24px;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 34px;
   text-align: center;
   display: block;
   color: #ffffff;
   font-weight: 400;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .one_block_cont h1 {
   color: #201f62;
   text-transform: uppercase;
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   text-align: center;
   font-size: 52px;
   margin: 0px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .one_block_cont h1 span {
@@ -104,120 +103,119 @@ th {
   margin: 30px auto;
   background: #3b9ece;
 }
+
+/* Phone Image */
 .phone_img {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -568px;
+  transform: translateX(-568px);
 }
 
-
-
-
-
-/*TEXT BLOCK*/
+/* Block Two */
 .block_two {
-background-color: #3b9ece;
-background-image: url(../img/two_bg.png);
-background-repeat: no-repeat;
-background-position: 70% 0px;
+  background-color: #3b9ece;
+  background-image: url(../img/two_bg.png);
+  background-repeat: no-repeat;
+  background-position: center top; /* Center background image */
+  background-size: cover; /* Cover the entire background */
+  padding: 70px 0; /* Ensure padding for top and bottom spacing */
 }
-.block_two .text {}
+
 .block_two .text h2 {
-color: #ffffff;
-text-transform: uppercase;
-text-align: center;
-margin-top: 70px;
-font-size: 36px;
-font-weight: 100;
-font-family: roboto;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0; /* Adjust margin if needed */
+  font-size: 40px; /* Increase font size for emphasis */
+  font-weight: 400; /* Slightly bolder font weight */
+  font-family: 'Roboto', sans-serif;
 }
+
 .block_two .text h2 span {
-width: 150px;
-height: 2px;
-background: #0bf1d7;
-margin: 30px auto;
-display: block;
-}
-.block_two .text span{
-font-size: 24px;
-color: #ffffff;
-font-weight: 100;
-font-family: roboto;
-text-align: center;
-line-height: 36px;
-display: block;
-margin-bottom: 60px;
+  width: 200px; /* Increase width for visual balance */
+  height: 3px; /* Slightly thicker line */
+  background: #0bf1d7;
+  margin: 20px auto; /* Adjusted margin for better alignment */
+  display: block;
 }
 
+.block_two .text span {
+  font-size: 20px; /* Adjust font size for better readability */
+  color: #ffffff;
+  font-weight: 300; /* Slightly lighter font weight */
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 1.5; /* Adjust line height for readability */
+  display: block;
+  margin: 20px auto; /* Adjusted margin for balanced spacing */
+  max-width: 800px; /* Limit text width for readability */
+}
 
-
-
-
-/* links */
+/* Links */
 .links-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Ensures the icons wrap if the screen is too small */
+  flex-wrap: wrap;
   gap: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
+
 .links-icon {
   text-align: center;
   cursor: pointer;
   position: relative;
 }
+
 .links-icon img {
   width: 50px;
   height: 50px;
   transition: transform 0.3s ease-in-out;
 }
+
+.links-icon img {
+  content: url('../img/class-icon-story-static.png');
+}
+
+.links-icon:hover img {
+  content: url('../img/class-icon-story-hover.png');
+  transform: scale(1.1);
+}
+
+.links-icon.active img {
+  content: url('../img/class-icon-story-active.png');
+}
+
 .links-icon h3 {
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 350;
   color: #000000;
   margin-top: 15px;
-  white-space: pre-line;
-  word-wrap: break-word;
 }
-.links-icon img {
-  content: url('../img/class-icon-story-static.png');
-}
-.links-icon:hover img {
-  content: url('../img/class-icon-story-hover.png');
-  transform: scale(1.1); /* Optional: slight zoom effect on hover */
-}
-.links-icon.active img {
-  content: url('../img/class-icon-story-active.png');
-}
+
 #links-description {
   text-align: center;
   margin-top: 20px;
 }
+
 #links-main-image {
   width: 100%;
   max-width: 800px;
   height: auto;
   margin: 10px auto;
   margin-top: 10px;
-  display: none; /* Initially hidden */
-  position: relative; /* Required for pseudo-element positioning */
-  mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 80%);
-  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,0.5) 85%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
-}
-.description-text p {
-  margin: 10px 0;
+  display: none;
+  position: relative;
+  mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,0.5) 85%, rgba(0,0,0,0) 100%);
 }
 
-
-
-/* Features */
+/* Class Icons */
 .class-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Ensures the icons wrap if the screen is too small */
+  flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 20px;
 }
@@ -325,26 +323,32 @@ margin-bottom: 60px;
   margin: 10px 0;
 }
 
-
-
 /* Subscribe */
 .subs {
   background: #181E2C;
   padding: 70px 30px;
 }
 
-.subs h2 {}
+.subs h2 {
+  font-size: 2.5rem; /* Add font-size for consistency */
+  color: #ffffff; /* Ensure color contrast */
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Adjust margin for better spacing */
+  font-weight: 600; /* Make heading bold */
+}
 
 .subs form {
   text-align: center;
+  max-width: 600px; /* Limit form width for larger screens */
+  margin: 0 auto; /* Center the form */
 }
 
 .subs .formdescr {
   display: block;
   color: #ffffff;
-  font-size: 26px;
+  font-size: 24px; /* Font size for readability */
   font-weight: 300;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -352,183 +356,311 @@ margin-bottom: 60px;
 .subs .btn_group {
   display: flex;
   justify-content: center; /* Center button horizontally */
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Add margin for spacing */
 }
 
 .subs .btn_group a {
-  padding: 14px 50px;
-  margin: 0px 8px;
+  padding: 14px 30px; /* Adjust padding for better button sizing */
   font-weight: bold;
   font-size: 16px;
-  font-family: Arial;
-  text-decoration: none; /* Optional: remove underline from the link */
-  color: white; /* Ensure the button text color matches */
-  background-color: #007bff; /* Optional: add background color for the button */
-  border: 2px solid #007bff; /* Optional: add border */
-  border-radius: 4px; /* Optional: add rounded corners */
-  display: inline-block; /* Ensure proper spacing */
+  font-family: 'Arial', sans-serif;
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* Ensure white text */
+  background-color: #007bff; /* Button background */
+  border: 2px solid #007bff; /* Button border */
+  border-radius: 4px; /* Rounded corners */
+  display: inline-block; /* Ensure buttons align properly */
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition for hover effect */
 }
 
+.subs .btn_group a:hover {
+  background-color: #0056b3; /* Darker background on hover */
+  color: #ffffff; /* Ensure text stays white */
+}
 
-/*registration*/
-  body {
-    font-family: Roboto, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .subs .btn_group {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 10px; /* Space between buttons */
+  }
+
+  .subs .btn_group a {
+    width: 80%; /* Adjust width for smaller screens */
+    padding: 14px; /* Adjust padding */
+    text-align: center; /* Center text inside buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .subs .btn_group a {
+    width: 90%; /* Further adjust width for smaller screens */
+  }
+}
+
+/* Registration */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 .container-fluid {
-    padding: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .subs {
-    background: url('../img/blockbg.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 70px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-top: 20px;
+  background: url('../img/blockbg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 70px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 h2.darktbgheadlines {
-    font-size: 2rem;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: 200;
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 200;
 }
 
 .formdescr {
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #ffffff;
-    font-weight: 200;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem; /* Adjusted for readability */
+  color: #ffffff;
+  font-weight: 200;
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 8px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 200;
-    color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 200;
+  color: #ffffff;
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 75%; /* Full width */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%; /* Full width */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 75%; /* Full width */
-    font-family: Roboto, Arial, sans-serif;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%; /* Full width */
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 #statusMessage {
-    text-align: center;
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+/* Container Styling */
+.container-fluid.social {
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading Styling */
+h2.lightbg {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff; /* White background for table */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff; /* Primary color for header */
+  color: #fff;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for readability */
+}
+
+tr:hover {
+  background-color: #e9ecef; /* Highlight row on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  h2.lightbg {
+    font-size: 20px;
+  }
+
+  span {
+    display: block;
     margin-top: 10px;
-    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+  }
 }
 
-
-
-/*Steps*/
+/* Steps */
 .steps {
-background: url(../img/blockbg.jpg);
-padding: 70px 0px;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.h2 {}
-.steps ul {
-padding: 0px;
-counter-reset: li;
-padding-top: 30px;
-}
-.steps ul li {
-position: relative;
-margin: 0 0 26px 0px;
-padding: 4px 100px;
-list-style: none;
-cursor: default;
-font-size: 26px;
-font-weight: 200;
-line-height: 40px;
-display: block;
-width: 50%;
-float: center;
-color: #ffffff;
-font-family: roboto;
-}
-.steps ul li:before {
-content: counter(li);
-counter-increment: li;
-position: absolute;
-top: 0px;
-left: 27px;
-box-sizing: border-box;
-margin-right: 8px;
-padding: 4px 19px;
-color: #fff;
-background: url('../img/99.png') no-repeat;
-font-weight: normal;
-font-family: roboto;
-height: 46px;
-width: 54px;
-font-size: 18px;
-}
-.clearfix::after {
-content: "";
-clear: both;
-display: table;
+  background: url(../img/blockbg.jpg);
+  padding: 70px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.steps h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px; /* Added margin for spacing */
+  font-size: 32px; /* Increase font size for better visibility */
+  font-weight: 600; /* Bold font weight for emphasis */
+  font-family: 'Roboto', sans-serif; /* Ensure consistent font styling */
+}
+
+.steps ul {
+  padding: 0;
+  counter-reset: li;
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+}
+
+.steps ul li {
+  position: relative;
+  margin: 0 0 26px 0;
+  padding: 10px 0 10px 80px; /* Adjusted padding for better text alignment */
+  font-size: 28px; /* Increase font size for better readability */
+  font-weight: 400; /* Slightly bolder text for readability */
+  line-height: 1.4; /* Adjust line height for better spacing */
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif; /* Consistent font styling */
+  word-wrap: break-word; /* Ensure text wraps within the container */
+}
+
+.steps ul li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 60px; /* Increase width of the box */
+  height: 60px; /* Increase height of the box */
+  padding: 10px;
+  color: #fff;
+  background: url('../img/99.png') no-repeat center center;
+  background-size: contain; /* Ensure the background image scales correctly */
+  font-size: 24px; /* Increase font size for better visibility */
+  text-align: center; /* Center text within the box */
+  line-height: 1.4; /* Center the number vertically */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .steps ul li {
+    padding: 10px 0 10px 70px; /* Adjust padding for smaller screens */
+    font-size: 22px; /* Adjust font size for smaller screens */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+
+  .steps ul li:before {
+    width: 50px; /* Adjust box size for smaller screens */
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .steps ul li {
+    padding: 10px 0 10px 60px; /* Further adjust padding */
+    font-size: 20px; /* Further adjust font size */
+    line-height: 1.6;
+  }
+
+  .steps ul li:before {
+    width: 40px; /* Further adjust box size */
+    height: 40px;
+    font-size: 18px;
+  }
+}
 
 
 
 /* Video section styles */
 .video {
   background: #3B9ECE;
-  padding: 70px 0px;
+  padding: 70px 0;
 }
 
 .video h2 {
   text-align: left;
+  color: #ffffff; /* Ensure the heading text is visible */
 }
 
 .video h2 span {
-  margin-left: 0px; 
   background: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px; /* Rounded corners for the span */
 }
 
 .video span {
@@ -543,25 +675,38 @@ display: table;
 }
 
 .video .btn_group {
-  text-align: left;
-  margin: 40px -10px;
-  margin-bottom: 0px;
+  display: flex; /* Use flexbox for button alignment */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between buttons */
+  margin: 40px 0; /* Adjusted margins */
 }
 
-.video .zetindex {
-  position: relative;
-  z-index: 1;
+.video .btn_group a {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .video .red_btn {
   background: #26749a;
-  border-color: #26749a;
+  border: 2px solid #26749a; /* Border color */
+  color: #ffffff; /* Text color */
 }
 
 .video .red_btn:hover {
   background: #ffffff;
   border-color: #ffffff;
   color: #26749a;
+}
+
+.video .border_btn {
+  background: transparent;
+  border: 2px solid #ffffff; /* Border color */
+  color: #ffffff;
 }
 
 .video .border_btn:hover {
@@ -572,15 +717,6 @@ display: table;
   position: relative;
 }
 
-.video i {
-  font-size: 400px;
-  position: absolute;
-  display: block;
-  top: -30px;
-  left: 0px;
-  color: #3494C3;
-}
-
 .video video {
   border: 8px solid #ffffff; /* White border around video */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for better definition */
@@ -589,31 +725,18 @@ display: table;
   height: auto;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 767px) {
-  .video .col-xs-6 {
-    width: 100%;
-    float: none;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video .btn_group {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: center; /* Center buttons horizontally */
   }
 
-  .video .video-pr {
-    text-align: center;
-  }
-
-  .video .vidos {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .video video {
-    width: 100%;
-    height: auto;
+  .video .btn_group a {
+    width: 80%; /* Adjust width for smaller screens */
+    margin-bottom: 10px; /* Space between buttons */
   }
 }
-
-
-
-
 
 
 /* Footer Styles */
