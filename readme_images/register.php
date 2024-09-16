@@ -1,7 +1,10 @@
 <?php
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *'); // Allows requests from any origin. Adjust as needed.
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS'); // Allow specific methods.
+header('Access-Control-Allow-Headers: Content-Type'); // Allow specific headers.
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
 $serverName = "PCNAME\\InstanceName";
 $connectionOptions = array(
     "Database" => "Account",
