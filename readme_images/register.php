@@ -1,71 +1,65 @@
 <?php
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *'); // Allows requests from any origin. Adjust as needed.
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS'); // Allow specific methods.
-header('Access-Control-Allow-Headers: Content-Type'); // Allow specific headers.
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+// Enable error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-$serverName = "PCNAME\\InstanceName";
-$connectionOptions = array(
-    "Database" => "Account",
-    "Uid" => "sa",
-    "PWD" => "Password"
-);
+ini_set('log_errors', 1);
+ini_set('error_log', 'C:\\inetpub\\wwwroot\\php_error.log'); // Adjust the path as needed
 
-$conn = sqlsrv_connect($serverName, $connectionOptions);
+$data = array('success' => false, 'message' => 'Unknown error');
 
-if ($conn === false) {
-    echo json_encode(["success" => false, "message" => "Database connection error."]);
-    exit();
-}
+try {
+    // Database connection
+    $serverName = "localhost";
+    $connectionOptions = array(
+        "Database" => "Account",
+        "Uid" => "sa",
+        "PWD" => "Password"
+    );
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-    $rpassword = trim($_POST['rpassword']);
+    // Establish the connection
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
 
-    $response = [];
-
-    if (strlen($username) < 3 || strlen($username) > 15) {
-        $response["success"] = false;
-        $response["message"] = "Your username must be between 3 and 15 characters in length.";
-    } elseif (strlen($password) < 3 || strlen($password) > 15 || strlen($rpassword) < 3 || strlen($rpassword) > 15) {
-        $response["success"] = false;
-        $response["message"] = "The password must be between 3 and 15 characters in length.";
-    } elseif ($password !== $rpassword) {
-        $response["success"] = false;
-        $response["message"] = "The passwords must be the same.";
-    } elseif ($username === $password) {
-        $response["success"] = false;
-        $response["message"] = "The username and password cannot be the same.";
-    } else {
-        $sql = "SELECT * FROM tUser WHERE sUserName = ?";
-        $params = array($username);
-        $stmt = sqlsrv_query($conn, $sql, $params);
-
-        if ($stmt === false) {
-            $response["success"] = false;
-            $response["message"] = "Error checking username.";
-        } elseif (sqlsrv_has_rows($stmt)) {
-            $response["success"] = false;
-            $response["message"] = "The username already exists.";
-        } else {
-            $sql = "INSERT INTO tUser (sUserID, sUserName, sUserPW) VALUES (?, ?, ?)";
-            $params = array($username, $username, md5($password));
-            $stmt = sqlsrv_query($conn, $sql, $params);
-
-            if ($stmt === false) {
-                $response["success"] = false;
-                $response["message"] = "Error inserting user.";
-            } else {
-                $response["success"] = true;
-                $response["message"] = "You've been successfully registered as <strong>" . htmlspecialchars($username) . "</strong>!";
-            }
-        }
+    if ($conn === false) {
+        throw new Exception('Connection failed: ' . print_r(sqlsrv_errors(), true));
     }
 
-    echo json_encode($response);
+    // Prepare and execute insert query
+    $sUserID = $_POST['username'] ?? ''; // Default to empty string if not set
+    $sUserPW = md5($_POST['password'] ?? ''); // Hash the password using MD5
+    $sUserName = $_POST['username'] ?? '';
+    $sUserIP = $_SERVER['REMOTE_ADDR']; // Use the IP address of the user
+    $bIsBlock = 0; // Default values for columns that allow NULLs
+    $bIsDelete = 0;
+    $nAuthID = 1; // Example value
+    $dDate = date('Y-m-d H:i:s');
+    $sUserNo = 0; // Example value
+    $blsBlock = 0;
+    $blsDelete = 0;
+
+    $sql = "INSERT INTO [dbo].[tUser] 
+            ([sUserID], [sUserPW], [sUserName], [sUserIP], [bIsBlock], [bIsDelete], [nAuthID], [dDate], [sUserNo], [blsBlock], [blsDelete]) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $params = array($sUserID, $sUserPW, $sUserName, $sUserIP, $bIsBlock, $bIsDelete, $nAuthID, $dDate, $sUserNo, $blsBlock, $blsDelete);
+
+    $stmt = sqlsrv_query($conn, $sql, $params);
+
+    if ($stmt === false) {
+        throw new Exception('Query failed: ' . print_r(sqlsrv_errors(), true));
+    }
+
+    $data['success'] = true;
+    $data['message'] = 'User registered successfully';
+
+} catch (Exception $e) {
+    $data['message'] = $e->getMessage();
 }
 
-sqlsrv_close($conn);
+// Send JSON response
+header('Content-Type: application/json');
+echo json_encode($data);
 ?>
