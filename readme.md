@@ -56,6 +56,31 @@ To deploy your own version of the template:
 
 1. After customizing, host the files on any static web hosting service such as GitHub Pages, Netlify, or your own server.
 
+## Deployment with Register.php script
+
+1. Enable IIS in your windows features, be sure to turn on CGI under: Internet Information Services -> World Wide Web Services -> Application Development Features -> CGI
+
+2. Download and extract the latest from php.net (I put mine in c:/php)
+
+3. Download and extract the latest from https://github.com/microsoft/msphpsql (put them into the c:/php/ext folder)
+
+4. rename/update your php.ini (remove production from file name)
+
+5. add the below 2 items to your php.ini file: *note:* be sure to update your code to match the version you're using
+   ```bash
+   code extension=php_sqlsrv_83_ts_x64.dll
+   code extension=php_pdo_sqlsrv_83_ts_x64.dll
+
+6. Move the register.php into your IIS webroot folder (Mine was C:\inetpub\wwwroot)
+
+7. Add a Module Mapping should look like:
+   ![Module Mapping](readme_images/modulemapping.png)
+
+
+8. *optional* use cloudflare tunnels to hide your IP, just direct it to: http://LANIP:80
+
+9. Update connection information at top of the registration script to match your database setup.
+
 ## Issues
 
 If you encounter any issues or have questions about the template, feel free to open a GitHub issue or contact me.
