@@ -132,49 +132,20 @@
   </div>
 </div>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
 <div class="container-fluid subs" id="register">
   <div class="container">
     <div class="row">
-      <h2 class="darktbgheadlines wow fadeInUp">Come Join the Fun.<span></span></h2>
-      <span class="formdescr wow fadeInRight">Register Below</span>
-      <form id="registerForm" method="POST" action="fiestaregister.php">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-      
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-      
-        <label for="rpassword">Repeat Password:</label>
-        <input type="password" id="rpassword" name="rpassword" required>
-      
-        <!-- Cloudflare Turnstile CAPTCHA -->
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAA-dQBL9M75hdObf" data-callback="setTurnstileResponse"></div>
-      
-        <!-- Hidden field to store the CAPTCHA response -->
-        <input type="hidden" id="cf-turnstile-response" name="cf-turnstile-response">
-      
-        <button type="submit" id="submitButton" disabled>Register</button>
-      </form>
-      
-      <script>
-        let captchaSolved = false;
-      
-        function setTurnstileResponse(token) {
-          document.getElementById("cf-turnstile-response").value = token;
-          captchaSolved = true;
-          document.getElementById("submitButton").disabled = false; // Enable the button when CAPTCHA is solved
-        }
-      
-        document.getElementById("registerForm").addEventListener("submit", function (e) {
-          if (!captchaSolved) {
-            e.preventDefault(); // Prevent submission if CAPTCHA isn't solved
-            alert("Please complete the CAPTCHA before submitting.");
-          }
-        });
-      </script>
-      <div id="statusMessage"></div>
+      <h2 class="darktbgheadlines wow fadeInUp">Sign Ups Are Closed<span></span></h2>
+      <span class="formdescr wow fadeInRight">Account creation is currently disabled while we prepare the next phase of the server.</span>
+      <div class="signup-status wow fadeInUp">
+        <p class="signup-badge">Sign Ups Closed</p>
+        <p>
+          This site is currently serving as an informational landing page. Check back later for account registration updates.
+        </p>
+        <p class="signup-note">
+          You can still review the game features, system requirements, and download details below.
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -236,7 +207,7 @@
     <div class="row">
       <h2 class="darktbgheadlines wow fadeInUp">How to play<span></span></h2>
       <ul>
-        <li class="wow fadeInLeft">Register an account. (<a class="scroll-to-register" href="#register">Register</a>)</li>
+        <li class="wow fadeInLeft">Account creation is currently unavailable. (<a class="scroll-to-register" href="#register">View status</a>)</li>
         <li class="wow fadeInRight">Download our client. (<a href="https://drive.google.com/file/d/1cD8lJWcesbHBByJK6A0YRY5paBc4vqZx/view?usp=share_link">Click here!</a>)</li>
         <li class="wow fadeInLeft">Extract Fiesta Online and Launch.</li>
         <li class="wow fadeInRight">Let the Launcher patch your client.</li>
@@ -256,7 +227,7 @@
             Catch a glimpse of the epic journey ahead. Watch our gameplay trailer and see what awaits you in the fight to save Isya. 
           </span>
           <div class="btn_group wow fadeInRight">
-            <a href="https://drive.google.com/file/d/1cD8lJWcesbHBByJK6A0YRY5paBc4vqZx/view?usp=share_link" class="border_btn white_btn option animated fadeInLeft">Download now!</a> <a href="#register" class="red_btn option animated fadeInRight">Register</a>
+            <a href="https://drive.google.com/file/d/1cD8lJWcesbHBByJK6A0YRY5paBc4vqZx/view?usp=share_link" class="border_btn white_btn option animated fadeInLeft">Download now!</a> <a href="#register" class="red_btn option animated fadeInRight">Sign Ups Closed</a>
           </div>
         </div>
       </div>
@@ -517,36 +488,6 @@ $(window).resize( setHeiHeight );
 <script src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.lightbox.min.js"></script>
-<script>
-  document.getElementById('registerForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
-  
-      var formData = new FormData(this);
-      var statusMessage = document.getElementById('statusMessage');
-  
-      fetch('https://sql.lanteacorp.com/fiestaregister.php', {
-          method: 'POST',
-          body: formData
-          // Content-Type header removed; FormData sets it automatically
-      })
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.json();
-      })
-      .then(data => {
-          if (data.success) {
-              statusMessage.innerHTML = '<span style="color: green;">' + data.message + '</span>';
-          } else {
-              statusMessage.innerHTML = '<span style="color: red;">' + data.message + '</span>';
-          }
-      })
-      .catch(error => {
-          statusMessage.innerHTML = '<span style="color: red;">An error occurred: ' + error.message + '</span>';
-      });
-  });
-</script>
 <footer class="footer">
   <div class="footer-left">
     <svg class="w-6 h-6" fill="white" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
